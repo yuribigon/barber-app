@@ -26,11 +26,15 @@ const BarbershopDetailsPage = async ({ params }: BarbershopDetailsPageProps) => 
         }
     })
 
+    if(!barbershop) {
+        return null;
+    }
+
     return (
         <div>
             <BarbershopInfo barbershop={barbershop} />
             <div className="p-5 flex flex-col gap-3">
-                {barbershop.services.map((service: { id: Key | null | undefined; }) => (
+                {barbershop.services.map((service) => (
                     <ServiceItem key={service.id} service={service} />
                 ))}
             </div>
