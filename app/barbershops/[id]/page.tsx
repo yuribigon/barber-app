@@ -5,6 +5,8 @@ import Image from "next/image";
 import BarbershopInfo from "./_components/barbershop-info";
 import ServiceItem from "./_components/service-item";
 import { Key } from "react";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { getServerSession } from "next-auth";
 
 interface BarbershopDetailsPageProps {
     params: {
@@ -13,6 +15,8 @@ interface BarbershopDetailsPageProps {
 }
 
 const BarbershopDetailsPage = async ({ params }: BarbershopDetailsPageProps) => {
+    const session = await getServerSession(authOptions)
+    
     if (!params.id) {
         return null;
     }
@@ -35,7 +39,7 @@ const BarbershopDetailsPage = async ({ params }: BarbershopDetailsPageProps) => 
             <BarbershopInfo barbershop={barbershop} />
             <div className="p-5 flex flex-col gap-3">
                 {barbershop.services.map((service) => (
-                    <ServiceItem key={service.id} service={service} />
+                    <ServiceItem key={service.id} service={service} isAuthenticated={!!session?.user} />
                 ))}
             </div>
         </div>
