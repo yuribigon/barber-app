@@ -86,7 +86,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
                 <div className="px-5">
                     <div className="relative h-[180px] w-full mt-6">
                         <Image
-                            src="/barbershop-map.png"
+                            src="/maps.jpg"
                             fill
                             alt={booking.barbershop.name}
                         />
@@ -160,9 +160,9 @@ const BookingItem = ({ booking }: BookingItemProps) => {
                             </AlertDialogTrigger>
                             <AlertDialogContent className="w-[90%]">
                                 <AlertDialogHeader>
-                                    <AlertDialogTitle>Deseja mesmo cancelar essa reserva?</AlertDialogTitle>
+                                    <AlertDialogTitle>Cancelar Reserva</AlertDialogTitle>
                                     <AlertDialogDescription>
-                                        Uma vez cancelada, não será possível reverter essa ação.
+                                        Tem certeza que deseja cancelar esse agendamento?
                                     </AlertDialogDescription>
                                 </AlertDialogHeader>
                                 <AlertDialogFooter className="flex-row gap-3">
