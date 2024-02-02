@@ -85,7 +85,7 @@ const ServiceItem = ({ barbershop, service, isAuthenticated }: ServiceItemProps)
             toast("Agendamento realizado com sucesso", {
                 description: format(newDate, "dd 'de' MMMM 'às' HH':'mm", { locale: ptBR }),
                 action: {
-                    label: "Ver agendamento",
+                    label: "Ver agendamentos",
                     onClick: () => router.push("/bookings"),
                 }
             })
