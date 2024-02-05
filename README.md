@@ -15,8 +15,8 @@ O projeto realizado na 3ª edição da Full Stack Week sob a mentoria de [Felipe
 - Cancelamento de Agendamento: Os clientes podem cancelar agendamentos previamente marcados.
 
 ## Pré-requisitos
-NextJS (versão 14.1.0)
-Node.js
+- NextJS (versão 14.1.0)
+- Node.js
 
 ## Instalação
 - Clone o repositório.
@@ -25,5 +25,5 @@ Node.js
 - Execute o aplicativo: npm run dev
 
 ## Contato
-Autor: Yuri Bigon
-Email: yuri.bigon@gmail.com
+- Autor: Yuri Bigon
+- Email: yuri.bigon@gmail.com
